@@ -5,3 +5,18 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+.img-fluid {
+  height: 520px;
+  filter: brightness(30%);
+}
+
+.display-1 {
+  text-shadow: 3px 3px 3px black;
+}
+
+.linea {
+  border-top: 3px solid #25bde6;
+  height: 15px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}

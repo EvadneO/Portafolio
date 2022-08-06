@@ -4,23 +4,62 @@ import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-			<div className="alert alert-info">
-				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
-			</div>
-			<p>
-				This boilerplate comes with lots of documentation:{" "}
-				<a href="https://github.com/4GeeksAcademy/react-flask-hello/tree/95e0540bd1422249c3004f149825285118594325/docs">
-					Read documentation
-				</a>
-			</p>
-		</div>
-	);
+  return (
+    <div className="text-center mt-5">
+      {/* Detalle de Portafolio */}
+      <div className="title">
+        <h1
+          className="display-4"
+          style={{
+            fontFamily: "Trebuchet MS",
+            fontWeight: "extrabold",
+          }}
+        >
+          Portafolio
+        </h1>
+        <div className="linea"></div>
+      </div>
+      {/* Detalle de Tecnologías */}
+      <div className="title bg-info">
+        <h1
+          className="display-4"
+          style={{
+            fontFamily: "Trebuchet MS",
+            fontWeight: "extrabold",
+          }}
+        >
+          Skillset
+        </h1>
+        <div className="linea"></div>
+      </div>
+      {/* Detalle de Experiencias */}
+      <div className="title">
+        <h1
+          className="display-4"
+          style={{
+            fontFamily: "Trebuchet MS",
+            fontWeight: "extrabold",
+          }}
+        >
+          Experience
+        </h1>
+        <div className="linea"></div>
+      </div>
+      {/* Detalle de Contactar*/}
+      <div className="title bg-info" style={{}}>
+        <h1
+          className="display-4"
+          style={{
+            fontFamily: "Trebuchet MS",
+            fontWeight: "extrabold",
+          }}
+        >
+          Contact
+        </h1>
+        <div className="linea"></div>
+      </div>
+    </div>
+  );
 };
