@@ -1,17 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
-import { Single } from "../pages/single";
-import eva from "../../img/eva.jpeg";
-import { Demo } from "../pages/demo";
-import { Link } from "react-router-dom";
 
-export const Portafolio = () => {
+export const Portafolio = (props) => {
   const [show, setShow] = useState(true);
+  const { store, actions } = useContext(Context);
+
+  useEffect(() => {
+    actions.getProyectos();
+  }, []);
 
   return (
     <>
-      <div className="container">
+      <div
+        className="col-md-3"
+        style={{ marginTop: "2rem", marginBottom: "4rem" }}
+      >
         <a
           type="button"
           onClick={() => {
@@ -35,7 +39,9 @@ export const Portafolio = () => {
               id="htmlContent"
               style={{ width: "18rem", margin: "auto" }}
             >
-              <h4 className="text-center">Proyecto</h4>
+              <h4 className="text-center">
+                <stron>{props.objeto.name}</stron>
+              </h4>
               <img
                 src="https://www.eltiempo.com/files/image_640_428/uploads/2019/12/07/5dec47012d257.jpeg"
                 typeof="submit"
@@ -43,10 +49,17 @@ export const Portafolio = () => {
                 alt="..."
               />
               <div className="card-body">
-                <a href="#" className="fas fa-share"></a>
                 <p className="card-text">
-                  Que es el proyecto, tecnologías usadas.
+                  <h5>Finalidad</h5>
+                  {props.objeto.purpose}
                 </p>
+                <p className="card-text">
+                  <h5>Tecnologías</h5>
+                  {props.objeto.technology}
+                </p>
+                <a href={props.objeto.link} className="fas fa-share">
+                  ver aquí
+                </a>
               </div>
             </div>
           )}

@@ -1,37 +1,48 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Portafolio } from "../component/portafolio";
+import { Experiencia } from "../component/experiencia";
+import { Contacto } from "../component/contact";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
+  useEffect(() => {
+    actions.getProyectos();
+    actions.getExperience();
+  }, []);
+
   return (
-    <div className="text-center mt-5">
+    <div className="fluid">
       {/* Detalle de Portafolio */}
-      <div className="title">
-        <h1
-          className="display-4"
-          style={{
-            fontFamily: "Trebuchet MS",
-            fontWeight: "extrabold",
-          }}
-        >
-          Portafolio
-        </h1>
-        <div className="linea"></div>
-        <div>
-          {" "}
-          <Portafolio />
+      <div className="container">
+        <div className="text-center">
+          <h1
+            className="display-4"
+            style={{
+              fontFamily: "Trebuchet MS",
+              fontWeight: "extrabold",
+            }}
+          >
+            Portafolio
+          </h1>
+          <div className="linea"></div>
+        </div>
+        <div className="row mt-5">
+          {store.proyectos.map(function (objeto) {
+            return <Portafolio objeto={objeto} />;
+          })}
         </div>
       </div>
       {/* Detalle de Tecnologías */}
-      <div className="title bg-info">
+      <div className="text-center bg-info">
         <h1
           className="display-4"
           style={{
             fontFamily: "Trebuchet MS",
             fontWeight: "extrabold",
+            color: "white",
           }}
         >
           Skillset
@@ -110,7 +121,7 @@ export const Home = () => {
         </div>
       </div>
       {/* Detalle de Experiencias */}
-      <div className="title">
+      <div className="text-center">
         <h1
           className="display-4"
           style={{
@@ -122,18 +133,32 @@ export const Home = () => {
         </h1>
         <div className="linea"></div>
       </div>
+      <div className="row" style={{ margin: "auto" }}>
+        {store.experience.map(function (objeto) {
+          return <Experiencia objeto={objeto} />;
+        })}
+      </div>
       {/* Detalle de Contactar*/}
-      <div className="title bg-info" style={{}}>
+      <div className="text-center bg-info" style={{}}>
         <h1
           className="display-4"
           style={{
             fontFamily: "Trebuchet MS",
             fontWeight: "extrabold",
+            color: "white",
           }}
         >
           Contact
         </h1>
         <div className="lineas"></div>
+        <div className="row">
+          <div
+            className="col-6"
+            style={{ margin: "auto", marginBottom: "10rem", marginTop: "5rem" }}
+          >
+            <Contacto />
+          </div>
+        </div>
       </div>
     </div>
   );
