@@ -13,7 +13,7 @@ export const Portafolio = (props) => {
   return (
     <>
       <div
-        className="col-md-3"
+        className="col-md-5"
         style={{ marginTop: "2rem", marginBottom: "4rem" }}
       >
         <a
@@ -23,16 +23,59 @@ export const Portafolio = (props) => {
           }}
         >
           {show ? (
-            <img
-              src="https://www.eltiempo.com/files/image_640_428/uploads/2019/12/07/5dec47012d257.jpeg"
-              className="card-img-top"
-              style={{ width: "18rem", margin: "auto" }}
-              alt="..."
-              data-bs-toggle="collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            />
+            <div
+              id="carouselExampleControls"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    src={props.objeto.img}
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={props.objeto.img2}
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={props.objeto.img3}
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
           ) : (
             <div
               className="card"
@@ -42,12 +85,6 @@ export const Portafolio = (props) => {
               <h4 className="text-center">
                 <stron>{props.objeto.name}</stron>
               </h4>
-              <img
-                src="https://www.eltiempo.com/files/image_640_428/uploads/2019/12/07/5dec47012d257.jpeg"
-                typeof="submit"
-                className="card-img-top"
-                alt="..."
-              />
               <div className="card-body">
                 <p className="card-text">
                   <h5>Finalidad</h5>
