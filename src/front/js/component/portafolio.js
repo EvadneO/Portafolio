@@ -12,95 +12,81 @@ export const Portafolio = (props) => {
 
   return (
     <>
+      {/* ) : ( */}
       <div
-        className="col-md-5"
-        style={{ marginTop: "2rem", marginBottom: "4rem" }}
+        className="card"
+        id="htmlContent"
+        style={{
+          width: "50rem",
+          margin: "auto",
+          marginTop: "3rem",
+          marginBottom: "3rem",
+        }}
       >
-        <a
-          type="button"
-          onClick={() => {
-            setShow(!show);
-          }}
+        <h3
+          className="text-center"
+          style={{ color: "green", marginTop: "1rem", marginBottom: "1rem" }}
         >
-          {show ? (
-            <div
-              id="carouselExampleControls"
-              className="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <img
-                    src={props.objeto.img}
-                    className="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src={props.objeto.img2}
-                    className="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    src={props.objeto.img3}
-                    className="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
+          <stron>{props.objeto.name}</stron>
+        </h3>
+        <div
+          id="carouselExampleControls"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src={props.objeto.img} className="d-block w-100" alt="..." />
             </div>
-          ) : (
-            <div
-              className="card"
-              id="htmlContent"
-              style={{ width: "18rem", margin: "auto" }}
-            >
-              <h4 className="text-center">
-                <stron>{props.objeto.name}</stron>
-              </h4>
-              <div className="card-body">
-                <p className="card-text">
-                  <h5>Finalidad</h5>
-                  {props.objeto.purpose}
-                </p>
-                <p className="card-text">
-                  <h5>Tecnologías</h5>
-                  {props.objeto.technology}
-                </p>
-                <a href={props.objeto.link} className="fas fa-share">
-                  ver aquí
-                </a>
-              </div>
+            <div className="carousel-item">
+              <img
+                src={props.objeto.img2}
+                className="d-block w-100"
+                alt="..."
+              />
             </div>
-          )}
-        </a>
+            <div className="carousel-item">
+              <img
+                src={props.objeto.img3}
+                className="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          ></button>
+        </div>
+        <div className="card-body">
+          <p className="card-text">
+            <h5>Finalidad</h5>
+            {props.objeto.purpose}
+          </p>
+          <p className="card-text">
+            <h5>Tecnologías</h5>
+            {props.objeto.technology}
+          </p>
+          <a href={props.objeto.link} className="fas fa-share">
+            ver aquí
+          </a>
+        </div>
+        {/* )}
+        </a> */}
       </div>
     </>
   );

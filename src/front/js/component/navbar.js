@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import eva from "../../img/eva.jpeg";
+import { Portafolio } from "../component/portafolio";
+import { Experiencia } from "../component/experiencia";
+import { Contacto } from "../component/contact";
+import { Tecnologia } from "./tecnologia";
+import { Portafo } from "../pages/portafo";
+import { Home } from "../pages/home";
 
 export const Navbar = () => {
   return (
@@ -41,54 +48,6 @@ export const Navbar = () => {
                 </strong>
               </h3>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container-fluid">
-        <div className="navbar-brand" href="#">
-          <h5 style={{ fontFamily: "sans-serif" }}>Evadne Olivo </h5>{" "}
-          <h6 className="text-muted" style={{ fontFamily: "serif" }}>
-            Desarrolladora Full Stack
-          </h6>
-        </div>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav text-center">
-            <h6>
-              <a
-                className="nav-link active text-white"
-                aria-current="page"
-                href="#"
-              >
-                Portafolio
-              </a>
-            </h6>
-            <h6>
-              <a className="nav-link text-white" href="#">
-                Skillset
-              </a>
-            </h6>
-            <h6>
-              <a className="nav-link text-white" href="#">
-                Experience
-              </a>
-            </h6>
-            <h6>
-              <a className="nav-link text-white" href="#">
-                Contact
-              </a>
-            </h6>
           </div>
         </div>
       </div>
