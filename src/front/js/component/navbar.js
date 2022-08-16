@@ -2,12 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import eva from "../../img/eva.jpeg";
-import { Portafolio } from "../component/portafolio";
-import { Experiencia } from "../component/experiencia";
-import { Contacto } from "../component/contact";
-import { Tecnologia } from "./tecnologia";
-import { Portafo } from "../pages/portafo";
-import { Home } from "../pages/home";
 
 export const Navbar = () => {
   return (

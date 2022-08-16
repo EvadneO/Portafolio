@@ -5,7 +5,6 @@ import { Portafolio } from "../component/portafolio";
 import { Experiencia } from "../component/experiencia";
 import { Contacto } from "../component/contact";
 import { Tecnologia } from "../component/tecnologia";
-import { Navbar } from "../component/navbar";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -113,14 +112,22 @@ export const Home = () => {
               fontFamily: "Trebuchet MS",
               fontWeight: "extrabold",
               color: "white",
-              marginTop: "3rem",
             }}
           >
-            Skillset
+            Tecnologías
           </h1>
           <div className="lineas"></div>
-          <div className="row mt-5">
-            <Tecnologia />
+          <div className="row">
+            <div
+              className="row"
+              style={{
+                margin: "auto",
+                marginBottom: "8rem",
+                marginTop: "3rem",
+              }}
+            >
+              <Tecnologia />
+            </div>
           </div>
         </div>
       ) : mode === "experiencia" ? (
@@ -199,17 +206,24 @@ export const Home = () => {
                 fontFamily: "Trebuchet MS",
                 fontWeight: "extrabold",
                 color: "white",
-                marginTop: "3rem",
               }}
             >
-              Skillset
+              Tecnologías
             </h1>
             <div className="lineas"></div>
-            <div className="row mt-5">
-              <Tecnologia />
+            <div className="row">
+              <div
+                className="row"
+                style={{
+                  margin: "auto",
+                  marginBottom: "8rem",
+                  marginTop: "3rem",
+                }}
+              >
+                <Tecnologia />
+              </div>
             </div>
           </div>
-
           <div className="text-center">
             <h1
               className="display-4"

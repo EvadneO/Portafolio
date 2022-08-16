@@ -17,7 +17,7 @@ export const Portafolio = (props) => {
         className="card"
         id="htmlContent"
         style={{
-          width: "50rem",
+          width: "55rem",
           margin: "auto",
           marginTop: "3rem",
           marginBottom: "3rem",
@@ -74,16 +74,20 @@ export const Portafolio = (props) => {
         </div>
         <div className="card-body">
           <p className="card-text">
-            <h5>Finalidad</h5>
+            <h5>
+              <strong>Finalidad</strong>
+            </h5>
             {props.objeto.purpose}
           </p>
           <p className="card-text">
-            <h5>Tecnologías</h5>
+            <h5>
+              <strong>Tecnologías</strong>
+            </h5>
             {props.objeto.technology}
           </p>
-          <a href={props.objeto.link} className="fas fa-share">
-            ver aquí
-          </a>
+          <div className="text-center">
+            <a href={props.objeto.link} className="fas fa-directions"></a>
+          </div>
         </div>
         {/* )}
         </a> */}

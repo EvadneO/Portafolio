@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 
 export const Tecnologia = () => {
   return (
-    <div className="row bg-info" style={{ margin: "3rem", padding: "1rem" }}>
+    <div className="row" style={{ margin: "3rem", padding: "1rem" }}>
       <div className="col-2">
         <img
           src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"

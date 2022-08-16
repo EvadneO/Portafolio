@@ -25,7 +25,7 @@ export const Contacto = () => {
   return (
     <div className="container-fluid bg-info">
       <form onSubmit={sendEmail}>
-        <div className="mb-6 ">
+        <div className="mb-6 " id="logo">
           <label
             className="display-6"
             style={{
@@ -62,6 +62,7 @@ export const Contacto = () => {
             name="message"
           ></textarea>
         </div>
+
         <button
           type="Submit"
           className="btn btn-dark outline-info btn-lg"
